@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Опрос: К какому взгляду вы склоняетесь больше?</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #74ABE2, #5563DE);
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    
+    .container {
+      background: #fff;
+      padding: 25px 40px;
+      border-radius: 10px;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+      max-width: 800px;
+      width: 90%;
+      margin: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #444;
+    }
+    
+    .question {
+      margin-bottom: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background: #f9f9f9;
+    }
+    
+    .question p {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+    
+    input[type="radio"] {
+      margin-right: 8px;
+    }
+    
+    button {
+      display: block;
+      margin: 25px auto 0;
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: 500;
+      color: #fff;
+      background-color: #5563DE;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+      background-color: #444bbd;
+    }
+    
+    .result {
+      margin-top: 30px;
+      font-size: 1.2em;
+      font-weight: 500;
+      text-align: center;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Опрос: К какому взгляду вы склоняетесь больше?</h1>
+    <form id="pollForm">
+      <!-- Вопрос 1 -->
+      <div class="question">
+        <p>1. Существует ли «цвет» в самом предмете?</p>
+        <label>
+          <input type="radio" name="q1" value="locke" required>
+          Цвет – это вторичное качество, возникающее в уме наблюдателя.
+        </label>
+        <label>
+          <input type="radio" name="q1" value="berkeley">
+          Цвет – это идея, и без восприятия он не существует.
+        </label>
+      </div>
+  
+      <!-- Вопрос 2 -->
+      <div class="question">
+        <p>2. Если в лесу падает дерево и никто его не слышит, раздался ли звук?</p>
+        <label>
+          <input type="radio" name="q2" value="locke" required>
+          Реальное физическое событие с объективными свойствами, звук – ощущение.
+        </label>
+        <label>
+          <input type="radio" name="q2" value="berkeley">
+          Звук существует только как воспринимаемая идея; без слушателя звука его нет.
+        </label>
+      </div>
+  
+      <!-- Вопрос 3 -->
+      <div class="question">
+        <p>3. Мы рождаемся с готовыми знаниями?</p>
+        <label>
+          <input type="radio" name="q3" value="locke" required>
+          Нет, разум – чистая доска, все знания приходят из опыта.
+        </label>
+        <label>
+          <input type="radio" name="q3" value="berkeley">
+          Нет, все знания – это восприятия, являющиеся идеями в уме.
+        </label>
+      </div>
+  
+      <!-- Вопрос 4 -->
+      <div class="question">
+        <p>4. Реален ли предмет, если его никто не видит?</p>
+        <label>
+          <input type="radio" name="q4" value="locke" required>
+          Да, предмет имеет объективные первичные качества и существует независимо от восприятия.
+        </label>
+        <label>
+          <input type="radio" name="q4" value="berkeley">
+          Нет, объект существует только в процессе восприятия; его существование поддерживается Богом.
+        </label>
+      </div>
+  
+      <!-- Вопрос 5 -->
+      <div class="question">
+        <p>5. Что происходит при оптических иллюзиях, когда палка в воде выглядит сломанной?</p>
+        <label>
+          <input type="radio" name="q5" value="locke" required>
+          Это ошибка восприятия, вторичное качество; физическая палка остаётся целой.
+        </label>
+        <label>
+          <input type="radio" name="q5" value="berkeley">
+          Всё, что мы видим – это идеи; понятие иллюзии определяется способом восприятия.
+        </label>
+      </div>
+  
+      <!-- Вопрос 6 -->
+      <div class="question">
+        <p>6. Что важнее для познания мира: опыт или разум?</p>
+        <label>
+          <input type="radio" name="q6" value="locke" required>
+          Опыт – источник знаний, а разум лишь упорядочивает чувственные данные.
+        </label>
+        <label>
+          <input type="radio" name="q6" value="berkeley">
+          Опыт – это восприятие идей, а разум их анализирует; материальной основы нет.
+        </label>
+      </div>
+  
+      <!-- Вопрос 7 -->
+      <div class="question">
+        <p>7. Если двое людей видят разные оттенки одного цвета, что это означает?</p>
+        <label>
+          <input type="radio" name="q7" value="locke" required>
+          Объективные характеристики остаются неизменными, а цвет – субъективное восприятие.
+        </label>
+        <label>
+          <input type="radio" name="q7" value="berkeley">
+          Нет объективного цвета – всё зависит от индивидуального восприятия, все качества – это идеи.
+        </label>
+      </div>
+  
+      <!-- Вопрос 8 -->
+      <div class="question">
+        <p>8. Откуда берётся боль при уколе?</p>
+        <label>
+          <input type="radio" name="q8" value="locke" required>
+          Физическое повреждение приводит к сигналам в организме, ощущение боли – вторичное качество.
+        </label>
+        <label>
+          <input type="radio" name="q8" value="berkeley">
+          Боль – воспринимаемая идея, возникающая в уме, без независимой материальной основы.
+        </label>
+      </div>
+  
+      <!-- Вопрос 9 -->
+      <div class="question">
+        <p>9. Могут ли два человека иметь абсолютно одинаковое восприятие мира?</p>
+        <label>
+          <input type="radio" name="q9" value="locke" required>
+          Люди могут схожим образом воспринимать объективные характеристики, различия присутствуют лишь в субъективном восприятии.
+        </label>
+        <label>
+          <input type="radio" name="q9" value="berkeley">
+          Восприятие – индивидуальный набор идей, невозможно говорить об абсолютно идентичном восприятии.
+        </label>
+      </div>
+  
+      <!-- Вопрос 10 -->
+      <div class="question">
+        <p>10. Что даёт гарантию существования мира, когда никто на него не смотрит?</p>
+        <label>
+          <input type="radio" name="q10" value="locke" required>
+          Объективная материя с первичными качествами существует независимо от восприятия.
+        </label>
+        <label>
+          <input type="radio" name="q10" value="berkeley">
+          Мир существует благодаря тому, что его постоянно воспринимает Бог, даже когда люди не наблюдают.
+        </label>
+      </div>
+  
+      <button type="submit">Отправить ответы</button>
+    </form>
+  
+    <div id="result" class="result"></div>
+  
+    <script>
+      // Функция для перемешивания массива
+      function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
+      
+      // Для каждого блока с вопросом перемешаем порядок label-ов
+      document.querySelectorAll('.question').forEach(question => {
+        const labels = Array.from(question.querySelectorAll('label'));
+        const parent = labels[0].parentNode;
+        const shuffledLabels = shuffle(labels);
+        shuffledLabels.forEach(label => parent.appendChild(label));
+      });
+  
+      document.getElementById("pollForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+        
+        let lockeScore = 0;
+        let berkeleyScore = 0;
+  
+        for (let i = 1; i <= 10; i++) {
+          const answer = document.querySelector('input[name="q' + i + '"]:checked');
+          if (answer) {
+            if (answer.value === "locke") {
+              lockeScore++;
+            } else if (answer.value === "berkeley") {
+              berkeleyScore++;
+            }
+          }
+        }
+        
+        let resultText = "";
+        if (lockeScore > berkeleyScore) {
+          resultText = "Ваши взгляды ближе к первому подходу: вы считаете, что объективные свойства мира существуют независимо от нашего восприятия, а опыт является основой знания.";
+        } else if (berkeleyScore > lockeScore) {
+          resultText = "Ваши взгляды ближе ко второму подходу: вы убеждены, что всё наше знание – это идеи в уме, и без восприятия материального мира он не существует.";
+        } else {
+          resultText = "Ваши взгляды сбалансированы: вы видите ценность как объективного восприятия, так и субъективного характера чувственных данных.";
+        }
+  
+        document.getElementById("result").textContent = resultText;
+      });
+    </script>
+  </div>
+</body>
+</html>
